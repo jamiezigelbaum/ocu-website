@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Coordination Unlimited, Inc.</title>
-    <meta name="description" content="Tech-driven organizational consulting — decentralized governance, DAOs, and strategic blockchain solutions.">
+    <title>Open Coordination Unlimited, Inc. | Decentralized Governance & Blockchain Consulting</title>
+    <meta name="description" content="Tech-driven organizational consulting specializing in decentralized governance structures, DAOs, and strategic blockchain solutions for forward-thinking organizations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,72 +16,272 @@
         }
 
         :root {
-            --text-primary: #1a1a2e;
-            --text-secondary: #4a4a68;
-            --accent: #3b82f6;
-            --bg: #fafafa;
-            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 720px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
+        /* Header */
         header {
-            padding: 80px 0 60px;
-            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-        }
-
-        .tagline {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        main {
-            flex: 1;
-            padding: 40px 0 80px;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 48px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .description {
-            font-size: 1.25rem;
-            line-height: 1.7;
             color: var(--text-primary);
-            margin-bottom: 40px;
-            font-weight: 400;
+            text-decoration: none;
+            letter-spacing: -0.02em;
         }
 
-        .contact {
-            border-top: 1px solid #eee;
-            padding-top: 32px;
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-left: 32px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-dark);
+        }
+
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+
+        section.alt {
+            background: var(--bg-alt);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-alt);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .stat {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Industries */
+        .industries-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .industry-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9375rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .contact-details {
+            background: var(--bg-alt);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .contact-item {
+            margin-bottom: 24px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
         }
 
         .contact-label {
@@ -89,52 +289,99 @@
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-bottom: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-value {
+            font-size: 1rem;
             font-weight: 500;
         }
 
-        .contact-email {
-            font-size: 1.125rem;
-            font-weight: 500;
-        }
-
-        .contact-email a {
+        .contact-value a {
             color: var(--accent);
             text-decoration: none;
-            transition: opacity 0.2s;
         }
 
-        .contact-email a:hover {
-            opacity: 0.8;
+        .contact-value a:hover {
+            text-decoration: underline;
         }
 
+        /* Footer */
         footer {
             padding: 40px 0;
+            border-top: 1px solid var(--border);
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.8125rem;
         }
 
-        .address {
-            margin-bottom: 8px;
-            line-height: 1.5;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-left: 24px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
         }
 
         .copyright {
-            opacity: 0.7;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .industries-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 16px;
+            }
         }
 
         @media (max-width: 600px) {
-            header {
-                padding: 60px 0 40px;
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
             }
 
-            .card {
-                padding: 32px 24px;
+            nav a {
+                margin: 0 12px;
             }
 
-            .description {
-                font-size: 1.125rem;
+            .hero {
+                padding: 60px 0;
+            }
+
+            .industries-list {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -142,38 +389,152 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">Open Coordination Unlimited</div>
-            <div class="tagline">Strategic Infrastructure for the Decentralized Future</div>
+            <div class="header-content">
+                <a href="/" class="logo">Open Coordination Unlimited</a>
+                <nav>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <section class="hero">
         <div class="container">
-            <div class="card">
-                <p class="description">
-                    We specialize in tech-driven organizational consulting — designing and implementing 
-                    advanced decentralized governance structures, DAOs, and strategic blockchain 
-                    solutions for forward-thinking organizations.
-                </p>
-                <div class="contact">
-                    <div class="contact-label">Get in Touch</div>
-                    <div class="contact-email">
-                        <a href="mailto:info@ocu.bz">info@ocu.bz</a>
+            <h1>Decentralized Governance & Blockchain Strategy</h1>
+            <p>We help organizations design, implement, and scale advanced coordination infrastructure — from DAO architecture to enterprise blockchain solutions.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="services" class="alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Strategic consulting at the intersection of technology, governance, and organizational design.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>DAO Architecture & Design</h3>
+                    <p>End-to-end design and implementation of decentralized autonomous organizations, including governance frameworks, tokenomics, and voting mechanisms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Smart Contract Development</h3>
+                    <p>Secure, audited smart contract solutions for governance, treasury management, and custom business logic on leading blockchain platforms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔗</div>
+                    <h3>Blockchain Strategy</h3>
+                    <p>Strategic advisory on blockchain adoption, platform selection, regulatory considerations, and integration with existing enterprise systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Tokenomics & Incentive Design</h3>
+                    <p>Economic modeling and incentive mechanism design to align stakeholder interests and drive sustainable ecosystem growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Governance Consulting</h3>
+                    <p>Advisory on governance best practices, proposal frameworks, delegation systems, and community coordination structures.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Protocol Integration</h3>
+                    <p>Technical integration services connecting organizations with DeFi protocols, identity systems, and cross-chain infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Building the Infrastructure for Decentralized Coordination</h2>
+                    <p>Open Coordination Unlimited, Inc. is a technology consulting firm focused on the emerging landscape of decentralized governance and blockchain-based organizational structures.</p>
+                    <p>We work with forward-thinking organizations — from startups to enterprises — to design and implement coordination systems that are transparent, resilient, and aligned with the future of work.</p>
+                    <p>Our team brings deep expertise in distributed systems, cryptographic protocols, governance theory, and organizational design.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">Web3</div>
+                        <div class="stat-label">Native Expertise</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">DAOs</div>
+                        <div class="stat-label">Specialized Focus</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">EVM</div>
+                        <div class="stat-label">Multi-Chain</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2024</div>
+                        <div class="stat-label">Established</div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <section class="alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve</h2>
+                <p>Bringing decentralized coordination to organizations across sectors.</p>
+            </div>
+            <div class="industries-list">
+                <div class="industry-item">DeFi Protocols</div>
+                <div class="industry-item">Investment DAOs</div>
+                <div class="industry-item">Creator Economies</div>
+                <div class="industry-item">Enterprise Blockchain</div>
+                <div class="industry-item">Social Networks</div>
+                <div class="industry-item">Gaming & Metaverse</div>
+                <div class="industry-item">Public Goods</div>
+                <div class="industry-item">Governance Platforms</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Build Together</h2>
+                    <p>Whether you're launching a new DAO, exploring blockchain integration for your organization, or need strategic guidance on decentralized governance — we're here to help.</p>
+                    <p>Reach out to discuss your project.</p>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="mailto:info@ocu.bz">info@ocu.bz</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Headquarters</div>
+                        <div class="contact-value">
+                            Open Coordination Unlimited, Inc.<br>
+                            20 N Gould St, Ste R<br>
+                            Sheridan, WY 82801-6317<br>
+                            United States
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <div class="address">
-                Open Coordination Unlimited, Inc.<br>
-                20 N Gould St, Ste R<br>
-                Sheridan, WY 82801-6317<br>
-                USA
+            <div class="footer-content">
+                <div class="copyright">© 2025 Open Coordination Unlimited, Inc. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
             </div>
-            <div class="copyright">© 2025 Open Coordination Unlimited, Inc.</div>
         </div>
     </footer>
 </body>
